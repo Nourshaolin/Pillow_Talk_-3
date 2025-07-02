@@ -1,12 +1,30 @@
 package pillow.system.controller;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name="User")
+@Table(name="users")
 public class User {
     @Id
-södlkfWEK
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private long userId;
+
+    @Column(nullable = false)
+    private String name;
+
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public User(long userId, String name) {
+        this.userId = userId;
+        this.name = name;
+    }
+
+
 }
