@@ -8,5 +8,5 @@ import jakarta.persistence.Table;
 @Table(name="User")
 public class User {
     @Id
-    @
+
 }
